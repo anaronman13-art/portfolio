@@ -39,23 +39,32 @@ const paginaNumeri: number[] = [...Array(totalPaginae)].map((_, i) => i+1)
 
 
 <template>
-
+<!--Botón a home-->
+       
 
     <div class="flex flex-col items-center justify-center gap-8 w-full max-w-350 my-8 mx-auto">
 
+        <div class="mb-4">
+         <RouterLink to="/">
+            <Button class="bg-blue-500 text-white hover:bg-blue-300 px-4 py-2 rounded-md">
+                Home
+            </Button>
+            </RouterLink>
+    </div>
+
         <div class="text-center">
-            <h1 class="font-bold text-xl lg:text-5xl mb-5">
-                The Simpsons Quote App
+            <h1 class="text-3xl font-semibold mb-4">
+                Trabajos
             </h1>
 
-            <p class="mb-4">Click on the quote of your favorite character</p>
+            <p class="mb-4">Galería de proyectos</p>
 
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
              
             <Card 
-                class="cursor-pointer w-[220px] h-[240px] hover:bg-[#ee3133] hover:text-white transition-colors"
+                class= "w-[220px] h-[260px] shadow-md hover:shadow-lg transition-all rounded-xl overflow-hidden"
                 v-for="card in listaCards"
                 >
 
@@ -66,7 +75,7 @@ const paginaNumeri: number[] = [...Array(totalPaginae)].map((_, i) => i+1)
                     <img 
                     :src="`/imagines/simpsons/${ card.image }`" 
                     alt=""
-                    class="w-48 h-42 object-cover object-top mt-2 bg-[#ffde00] rounded-t-md border border-black"
+                    class="w-full h-40 object-cover rounded-m"
                     >
                     <h2 class="font-medium text-lg">{{ card.title }}</h2>
 
@@ -75,16 +84,12 @@ const paginaNumeri: number[] = [...Array(totalPaginae)].map((_, i) => i+1)
 
         </div>
 
+
         <div class="flex flex-row items-center justify-center gap-2 mt-4">
             <button
-                @click="ireAdPaginam(nuncPagina - 1)" 
-                :disabled="nuncPagina === 1"
-                :class="['px-4 py-2 rounded-md font-medium transition-colors',
-                    nuncPagina === 1
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-[#ffde00] hover:bg-[#ee3133] hover:text-white'
-
-                ]"
+            @click="ireAdPaginam(nuncPagina - 1)" 
+            :disabled="nuncPagina === 1"
+            class="px-3 py-1 border rounded-md disabled:opacity-40"
             >
                 Anterior
             </button>
@@ -93,24 +98,19 @@ const paginaNumeri: number[] = [...Array(totalPaginae)].map((_, i) => i+1)
             <button
                 v-for="pagina in paginaNumeri" 
                 @click="ireAdPaginam(pagina)"
-                :class="['w-10 h-10 rounded-md font-medium transition-colors ', 
-                    nuncPagina === pagina
-                     ? 'bg-[#ee3133] text-white'
-                        :'bg-[#ffde00]  hover:hover:bg-[#ee3133] hover:text-white'
+                :class="[
+                    'w-8 h-8 border rounded-md',
+                    nuncPagina === pagina ? 'bg-black text-white' : ''
                 ]"
-            >
+                >
                 {{ pagina }}
             </button>
 
             <button
-                :disabled="nuncPagina === totalPaginae"
-                @click="ireAdPaginam(nuncPagina+1)" 
-                :class="['px-4 py-2 rounded-md font-medium transition-colors bg-[#ffde00] hover:bg-[#ee3133] hover:text-white',
-                    nuncPagina === totalPaginae
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-[#ffde00] hover:bg-[#ee3133] hover:text-white'
-
-                ]"
+            <
+                 @click="ireAdPaginam(nuncPagina + 1)"
+                 :disabled="nuncPagina === totalPaginae"
+                 class="px-3 py-1 border rounded-md disabled:opacity-40"
             >
                 Siguiente
             </button>
