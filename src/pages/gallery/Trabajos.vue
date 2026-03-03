@@ -39,18 +39,19 @@ const paginaNumeri: number[] = [...Array(totalPaginae)].map((_, i) => i+1)
 
 
 <template>
-<!--Botón a home-->
+
        
 
     <div class="flex flex-col items-center justify-center gap-8 w-full max-w-350 my-8 mx-auto">
 
+        <!--Botón a home-->
         <div class="mb-4">
          <RouterLink to="/">
             <Button class="bg-blue-500 text-white hover:bg-blue-300 px-4 py-2 rounded-md">
                 Home
             </Button>
             </RouterLink>
-    </div>
+         </div>
 
         <div class="text-center">
             <h1 class="text-3xl font-semibold mb-4">
