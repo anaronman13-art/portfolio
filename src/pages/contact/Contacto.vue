@@ -3,9 +3,7 @@
 import { ref } from 'vue'
 import type { DateValue } from 'reka-ui'
 
-/* ======================
-   SHADCN COMPONENTS
-====================== */
+
 
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
@@ -27,9 +25,7 @@ import {
 import { Calendar } from '@/components/ui/calendar'
 import Button from '@/components/ui/button/Button.vue'
 
-/* ======================
-   ICONOS (lucide)
-====================== */
+
 
 import {
   Phone,
@@ -41,9 +37,6 @@ import {
   MessageCircle
 } from 'lucide-vue-next'
 
-/* ======================
-   VARIABLES REACTIVAS
-====================== */
 
 const dies = ref<DateValue>()
 

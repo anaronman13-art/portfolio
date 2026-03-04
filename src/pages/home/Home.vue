@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import Button from '@/components/ui/button/Button.vue';
+import { RouterLink } from 'vue-router';
 
 
 
 </script>
 
-<>
 
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center gap-10 px-4">

@@ -1,6 +1,6 @@
-
-
 import Contacto from "@/pages/contact/Contacto.vue";
+import Detalle from "@/pages/gallery/Detalle.vue";
+import LayoutGaleria from "@/pages/gallery/LayoutGaleria.vue";
 import Trabajos from "@/pages/gallery/Trabajos.vue";
 import Home from "@/pages/home/Home.vue";
 import Info from "@/pages/iformartion/Info.vue";
@@ -20,8 +20,18 @@ export const router = createRouter({
     },
     {
       path: '/gallery',
-      name: 'gallery',
+      children: [
+    {
+      path: '',
+      name: 'galeria',
       component: Trabajos
+    },
+    {
+      path: ':id',
+      name: 'obra-detalle',
+      component: Detalle
+    }
+  ]
     },
     {
       path: '/info',
