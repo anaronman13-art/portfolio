@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
-import { useProyectos } from '@/composables/useProyectos'
+import { trabajos } from '@/pages/gallery/data'
 
 const route = useRoute()
 const router = useRouter()
 
-const { getProyecto } = useProyectos()
-const proyectoId = route.params.id as string
-const proyecto = getProyecto(proyectoId)
+const proyectoId = Number(route.params.id)
+
+const proyecto = trabajos.find(
+  trabajo => trabajo.id === proyectoId
+)
 
 // Función para volver a la galería
 const volver = () => router.push({ name: 'galeria' })
@@ -25,9 +27,9 @@ const volver = () => router.push({ name: 'galeria' })
     <div class="flex flex-col lg:flex-row gap-8 items-start">
       <!-- Imagen de la obra -->
       <div class="w-full lg:w-1/2 flex justify-center">
-        <img 
-          :src="proyecto?.imagen ?? '/placeholder.jpg'" 
-          :alt="proyecto?.titulo ?? 'Obra'" 
+        <img
+          :src="proyecto ? `/trabajos/${proyecto.cuadro}` : '/placeholder.jpg'"
+          :alt="proyecto?.titulo ?? 'Obra'"
           class="w-full h-auto rounded-md shadow-md"
         />
       </div>
@@ -40,6 +42,8 @@ const volver = () => router.push({ name: 'galeria' })
     </div>
   </div>
 </template>
+
+
 
 <style scoped>
 

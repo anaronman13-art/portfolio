@@ -48,11 +48,11 @@ const ireAdPaginam = (pagina: number) => {
     
     <img
     src="/galleryimag/marco1.png"
-    class="absolute top-[20%] left-[5%] w-[50%] z-20"
+    class="absolute top-[19.5%] left-[5%] w-[49.5%] z-20 pointer-events-none"
   />
   <img
     src="/galleryimag/marco2.png"
-    class="absolute top-[20%] left-[45%] w-[50%] z-20"
+    class="absolute top-[19.5%] left-[45%] w-[49.5%] z-20 pointer-events-none"
   />
     <!-- Tarjetas -->
     <div class="grid grid-cols-2 gap-[180px] justify-items-center px-8 md:px-12 max-w-6xl mx-auto">
@@ -66,7 +66,7 @@ const ireAdPaginam = (pagina: number) => {
           @click="router.push({ name: 'obra-detalle', params: { id: card.id } })"
         >
           <img
-            :src="`/trabajos/${card.imagen}`"
+            :src="`/trabajos/${card.cuadro}`"
             :alt="card.titulo"
             class="inset-0 w-full h-full object-cover"
           />
