@@ -3,27 +3,19 @@ import Button from '@/components/ui/button/Button.vue'
 import { Card, CardContent } from '@/components/ui/card'
 import { computed, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
+import{ trabajos } from './data'
 
-// Configuración del router
+
 const router = useRouter()
 
-// Datos de ejemplo de tarjetas
-const totalCards = 12
-const cards = Array.from({ length: totalCards }, (_, i) => ({
-  id: i + 1,
-  title: `Trabajo ${i + 1}`,
-  image: '/ruta-de-tu-imagen-ejemplo.jpg', // Cambia esta ruta si quieres
-}))
-
-// Paginación
-const inPagina = 6
+const inPagina = 2
 const nuncPagina = ref(1)
-const totalPaginae = Math.ceil(cards.length / inPagina)
+const totalPaginae = Math.ceil(trabajos.length / inPagina)
 
 const listaCards = computed(() => {
   const inicio = (nuncPagina.value - 1) * inPagina
   const fin = inicio + inPagina
-  return cards.slice(inicio, fin)
+  return trabajos.slice(inicio, fin)
 })
 
 const paginaNumeri = [...Array(totalPaginae)].map((_, i) => i + 1)
@@ -36,7 +28,7 @@ const ireAdPaginam = (pagina: number) => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center gap-8 w-full max-w-350 my-8 mx-auto">
+  <div class="flex flex-col items-center justify-center gap-8 w-full max-w-350 -mt-2 mx-auto">
 
     <!-- Botón a home -->
     <div class="mb-4">
@@ -50,32 +42,42 @@ const ireAdPaginam = (pagina: number) => {
     <!-- Título -->
     <div class="text-center">
       <h1 class="text-3xl font-semibold mb-4">Trabajos</h1>
-      <p class="mb-4">Galería de proyectos</p>
+  
     </div>
-
-    <!-- Grid de tarjetas -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
+  
+    
+    <img
+    src="/galleryimag/marco1.png"
+    class="absolute top-[20%] left-[5%] w-[50%] z-20"
+  />
+  <img
+    src="/galleryimag/marco2.png"
+    class="absolute top-[20%] left-[45%] w-[50%] z-20"
+  />
+    <!-- Tarjetas -->
+    <div class="grid grid-cols-2 gap-[180px] justify-items-center px-8 md:px-12 max-w-6xl mx-auto">
       <Card
         v-for="card in listaCards"
         :key="card.id"
-        class="w-55 h-65 shadow-md hover:shadow-lg transition-all rounded-xl overflow-hidden"
+        class="relative w-110 h-70 shadow-md hover:shadow-lg transition-all rounded-xl overflow-hidden border-none"
       >
         <CardContent
-          class="flex flex-col items-center gap-1 w-full px-0"
+          class="relative flex flex-col items-center gap-1 w-full px-0"
           @click="router.push({ name: 'obra-detalle', params: { id: card.id } })"
         >
           <img
-            :src="card.image"
-            alt=""
-            class="w-full h-40 object-cover rounded-md"
+            :src="`/trabajos/${card.imagen}`"
+            :alt="card.titulo"
+            class="inset-0 w-full h-full object-cover"
           />
-          <h2 class="font-medium text-lg">{{ card.title }}</h2>
+          
+          <h2 class="font-medium text-lg">{{ card.titulo }}</h2>
         </CardContent>
       </Card>
     </div>
 
     <!-- Paginación -->
-    <div class="flex flex-row items-center justify-center gap-2 mt-4">
+    <div class="flex flex-row items-center justify-center gap-2 mt-12">
       <button
         @click="ireAdPaginam(nuncPagina - 1)"
         :disabled="nuncPagina === 1"

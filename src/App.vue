@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
 
-import Menu from '@/components/Menu.vue'
+import Menu from '@/components/Menu.vue';
+import Minimenu from './components/Minimenu.vue';
+
 
 const menuItems = [
   { label: 'Galería', href: '/gallery' },
@@ -14,7 +16,8 @@ const menuItems = [
 
 <template>
   <main>   
-    <Menu :items="menuItems" />
+<Minimenu />
+<!-- <Menu :items="menuItems" /> -->
     <RouterView />
   </main>
 </template>
