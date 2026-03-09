@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
 import { trabajos } from '@/pages/gallery/data'
+import CarruselTrabajos from '@/components/CarruselTrabajos.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -40,6 +41,11 @@ const volver = () => router.push({ name: 'galeria' })
         <p>{{ proyecto?.descripcion ?? 'Descripción de ejemplo de la obra...' }}</p>
       </div>
     </div>
+
+    <CarruselTrabajos v-if="proyecto && proyecto.gallery.length > 0"
+  :images="proyecto.gallery"
+  />
+
   </div>
 </template>
 
