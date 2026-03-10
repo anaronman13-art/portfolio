@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router';
 <template>
 
 
-  <div class="min-h-screen flex flex-col items-center justify-center gap-10 px-4">
+  <div class="min-h-screen flex flex-col items-center justify-center gap-10 px-4 bg-gray-900">
 
     
     <!--

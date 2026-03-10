@@ -34,7 +34,7 @@ onUnmounted(() => {
   if (interval) clearInterval(interval)
 })
 
-// También actualizamos el índice si cambia la lista de imágenes
+
 watch(() => props.images, () => {
   currentIndex.value = 0
 })
@@ -42,27 +42,27 @@ watch(() => props.images, () => {
 
 <template>
   <div class="w-full max-w-3xl mx-auto mt-12 relative">
-    <!-- Imagen actual -->
-    <div class="overflow-hidden rounded-lg shadow-md">
+ 
+    <div class="overflow-hidden shadow-md">
       <img
         :src="props.images[currentIndex]"
         alt="Imagen del trabajo"
-        class="w-full h-100 object-cover"
+        class="w-full h-full object-cover"
       />
     </div>
 
     <!-- Botones anterior / siguiente -->
     <button
       @click="prev"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-md hover:bg-opacity-70"
+      class="absolute top-1/2 left-[-14rem] transform -translate-y-1/2 bg-opacity-50 text-white px-3 py-1 rounded-md hover:bg-opacity-70 z-40"
     >
-      ◀
+       <img src="/galleryimag/fizq.png" alt="Anterior" class="w-10 h-auto"/>
     </button>
     <button
       @click="next"
-      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-md hover:bg-opacity-70"
+      class="absolute top-1/2 right-[-14rem] transform -translate-y-1/2 bg-opacity-50 text-white px-3 py-1 rounded-md hover:bg-opacity-70 z-40"
     >
-      ▶
+      <img src="/galleryimag/fder.png" alt="Anterior" class="w-10 h-auto"/>
     </button>
 
     <!-- Indicadores -->
