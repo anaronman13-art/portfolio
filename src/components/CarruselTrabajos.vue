@@ -5,24 +5,23 @@ interface Props {
   images: string[]
 }
 
-// Recibimos las imágenes
+
 const props = defineProps<Props>()
 
-// Índice de la imagen actual
 const currentIndex = ref(0)
 
-// Función para ir a la siguiente imagen
+
 const next = () => {
   currentIndex.value = (currentIndex.value + 1) % props.images.length
 }
 
-// Función para ir a la anterior imagen
+
 const prev = () => {
   currentIndex.value =
     (currentIndex.value - 1 + props.images.length) % props.images.length
 }
 
-// Autoplay opcional
+
 const autoPlayDelay = 3000
 let interval: number | undefined
 
@@ -77,5 +76,5 @@ watch(() => props.images, () => {
 </template>
 
 <style scoped>
-/* Si quieres, puedes ajustar alturas y sombras aquí */
+
 </style>

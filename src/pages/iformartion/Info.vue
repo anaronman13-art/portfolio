@@ -5,14 +5,8 @@ import {  Instagram, X, Youtube } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="p-8 flex flex-col items-center">
-    <div class="mb-4">
-      <RouterLink to="/">
-        <Button class="bg-blue-500 text-white hover:bg-blue-300 px-4 py-2 rounded-md">
-          Home
-        </Button>
-      </RouterLink>
-    </div>
+  <div class="p-8 flex flex-col items-center bg-[#071633]">
+    
 
     
 
@@ -33,27 +27,25 @@ import {  Instagram, X, Youtube } from 'lucide-vue-next'
           <h2 class="detalle-titulo">Habilidades técnicas</h2>
           <p class="detalle-parrafo">
             Adobe Photoshop · Adobe Illustrator · Adobe InDesign<br />
-            Ilustración digital y tradicional · Composición visual<br />
-            Teoría del color · Conceptualización de ideas
           </p>
         </div>
 
         <div>
             <h2 class="detalle-titulo">Contacto y redes</h2>
             <p class="detalle-parrafo">
-              Puedes escribirme por correo electrónico:
-              <a href="mailto:tuemail@example.com" class="text-blue-600 hover:underline">tuemail@example.com</a>
+                ¡No dude en contactarme por correo o por redes sociales!
+              <a href="aronman13@gmail.com" class="text-[#92b6d0] hover:underline">aronman13@gmail.com</a>
             </p>
 
             <div class="flex gap-4 mt-2">
               <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener">
-                <Instagram class="w-6 h-6 text-gray-700 hover:text-pink-500"/>
+                <Instagram class="w-6 h-6 text-[#c8b082] hover:text-pink-500"/>
               </a>
               <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener">
-                <X class="w-6 h-6 text-gray-700 hover:text-blue-400"/>
+                <X class="w-6 h-6 text-[#c8b082] hover:text-blue-400"/>
               </a>
               <a href="https://www.youtube.com/@tuusuario" target="_blank" rel="noopener">
-                <Youtube class="w-6 h-6 text-gray-700 hover:text-red-600"/>
+                <Youtube class="w-6 h-6 text-[#c8b082] hover:text-red-600"/>
               </a>
             </div>
           </div>
@@ -61,34 +53,36 @@ import {  Instagram, X, Youtube } from 'lucide-vue-next'
 
       <div class="flex flex-col gap-6">
         <div>
-          <h2 class="detalle-titulo">Perfil creativo</h2>
+          <h2 class="detalle-titulo">Ana Ron Manzano</h2>
           <p class="detalle-parrafo">
-            Soy una persona creativa con especial interés en la ilustración y el diseño visual,
-            con experiencia en proyectos gráficos tanto personales como académicos.
+            Soy estudiante en el grado de Diseño y Tecnologías Creativas en la Universidad Politécnica de Valencia.
+            Tnego un gran interés en la ilustración, el arte conceptual y el diseño de videojuegos, y manejo tanto herramientas tradicionales como digitales.
           </p>
         </div>
 
         <div>
           <h2 class="detalle-titulo">Formación</h2>
           <p class="detalle-parrafo">
-            Bachillerato de Artes, con base sólida en dibujo, composición y color.
-            Actualmente continúo formándome mediante proyectos personales y aprendizaje autodidacta.
+            Bachillerato de Artes, actualmente cursando segundo año en el grado de Diseño y Tecnologías Creativas en la UPV.
+            Actualmente continúo formándome tanto en el grado de Diseño y Tecnologías Creativas como mediante proyectos personales y aprendizaje autodidacta.
           </p>
         </div>
 
         <div>
           <h2 class="detalle-titulo">Idiomas</h2>
           <p class="detalle-parrafo">
-            Español — Lengua materna<br />
-            Inglés — Nivel intermedio
+            Español · Inglés<br />
+            
           </p>
         </div>
 
         <div>
           <h2 class="detalle-titulo">Sobre mí</h2>
           <p class="detalle-parrafo">
-            Me considero una persona curiosa, responsable y con muchas ganas de aprender.
-            Disfruto explorando referencias visuales y mejorando mis habilidades constantemente.
+            Me considero una persona con una gran curiosidad por aprender diversas técnicas y modods de expresión. Me interesa especialmente el mixed-media y mezcla de formatos como pueden ser
+            la fotografía, la ilustración con todo tipo de técnicas tradicionales y digitales y los medios audiovisuales. 
+            Tengo especial interés en aprender sobre animación, pixel art, diseño de videojuegos, creación de cómic y arte conceptual.
+            Actualmente destaco especialmente en la creación de arte conceptual, diseño de personaje e ilustración.
           </p>
         </div>
       </div>
@@ -102,14 +96,14 @@ import {  Instagram, X, Youtube } from 'lucide-vue-next'
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #c0c0c0;
+  color: #f49a21;
   margin-bottom: 0.5rem;
 }
 
 .detalle-parrafo {
   font-family: "Palatino Linotype", "Book Antiqua", serif;
-  font-size: 1rem;
-  color: #afafaf;
+  font-size: 1.2rem;
+  color: #eddfb6;
   line-height: 1.6;
 
   text-align: justify;

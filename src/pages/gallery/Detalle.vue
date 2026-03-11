@@ -43,7 +43,7 @@ const portadaSrc = proyecto ? `/portadas/${proyecto.portada}` : '/placeholder.jp
       
       <div class="w-full lg:w-1/2 flex flex-col gap-4">
         <h1 class="detalle-titulo">{{ proyecto?.titulo ?? 'Título de la obra' }}</h1>
-        <p class="detalle-parrafo">{{ proyecto?.descripcion ?? 'Descripción de ejemplo de la obra...' }}</p>
+        <p class="detalle-parrafo max-w-lg whitespace-pre-line">{{ proyecto?.descripcion ?? 'Descripción de ejemplo de la obra...' }}</p>
       </div>
     </div>
 
@@ -83,14 +83,14 @@ const portadaSrc = proyecto ? `/portadas/${proyecto.portada}` : '/placeholder.jp
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.7rem;
   font-weight: bold;
-  color: #222;
+  color: #f49a21;
 }
 
 
 .detalle-parrafo {
   font-family: "Palatino Linotype", "Book Antiqua", serif;
-  font-size: 1rem;
-  color: #444;
+  font-size: 1.4rem;
+  color: #eddfb6;
   line-height: 1.6;
 }
 </style>

@@ -15,9 +15,9 @@ const menuItems = [
 </script>
 
 <template>
-  <main class="bg-gray-900 min-h-screen relative">   
+  <main class="bg-[#011748] min-h-screen relative z-999">   
 <Minimenu />
-<!-- <Menu :items="menuItems" /> -->
+
     <RouterView />
   </main>
 </template>
