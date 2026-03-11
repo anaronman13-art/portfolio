@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue'
 import { RouterLink } from 'vue-router'
-import {  Instagram, Twitter, Youtube } from 'lucide-vue-next'
+import {  Instagram, X, Youtube } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import {  Instagram, Twitter, Youtube } from 'lucide-vue-next'
 
     
 
-    <div class="info-arca grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto mt-8 px-6">
+    <div class="pb-24 info-arca grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto mt-8 px-6">
 
       <div class="flex flex-col gap-8 items-start">
         
@@ -50,7 +50,7 @@ import {  Instagram, Twitter, Youtube } from 'lucide-vue-next'
                 <Instagram class="w-6 h-6 text-gray-700 hover:text-pink-500"/>
               </a>
               <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener">
-                <Twitter class="w-6 h-6 text-gray-700 hover:text-blue-400"/>
+                <X class="w-6 h-6 text-gray-700 hover:text-blue-400"/>
               </a>
               <a href="https://www.youtube.com/@tuusuario" target="_blank" rel="noopener">
                 <Youtube class="w-6 h-6 text-gray-700 hover:text-red-600"/>

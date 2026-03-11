@@ -55,11 +55,11 @@ const ireAdPaginam = (pagina: number) => {
     class="absolute top-[19.5%] left-[45%] w-[49.5%] z-20 pointer-events-none"
   />
     <!-- Tarjetas -->
-    <div class="grid grid-cols-2 gap-[180px] justify-items-center px-8 md:px-12 max-w-6xl mx-auto">
+    <div class="grid grid-cols-2 gap-140 justify-items-center px-4 md:px-8 max-w-6xl mx-auto mt-18">
       <Card
         v-for="card in listaCards"
         :key="card.id"
-        class="relative w-110 h-70 shadow-md hover:shadow-lg transition-all rounded-xl overflow-hidden border-none"
+        class="relative w-147 h-100 shadow-md hover:shadow-lg transition-all rounded-xl overflow-hidden border-none"
       >
         <CardContent
           class="relative flex flex-col items-center gap-1 w-full px-0"
